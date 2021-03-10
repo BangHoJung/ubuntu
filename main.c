@@ -25,10 +25,12 @@ int main(void) {
 			printf("name : "); scanf("%s",perList[idx].name);
 			printf("tel : "); scanf("%s",perList[idx].tel);
 			idx++;
+			printf("input complete\n");
 			break;
 		case UPDATE :
 			printf("check name : "); scanf("%s",name);
 			for(i=0;i<idx;i++) {
+				printf("update!!\n");
 				if(strcmp(perList[i].name,name)==0) {
 					printf("change tel :"); scanf("%s",perList[i].tel);
 					break;
@@ -39,6 +41,7 @@ int main(void) {
 			printf("search name : "); scanf("%s",name);
 			for(i=0;i<idx;i++) {
 				if(strcmp(perList[i].name,name)==0) {
+					printf("find!!\n");
 					printf("name : %s / tel : %s\n",perList[i].name, perList[i].tel);
 					break;
 				}
@@ -62,5 +65,6 @@ int main(void) {
 		}
 		if(flag == 0) break;
 	}
+	printf("종료\n");
 	return 0;
 }
